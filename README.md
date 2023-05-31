@@ -157,7 +157,8 @@ No known bugs at this time.
 Alexa Orrico - [Github](https://github.com/alexaorrico) / [Twitter](https://twitter.com/alexa_orrico)  
 Jennifer Huang - [Github](https://github.com/jhuang10123) / [Twitter](https://twitter.com/earthtojhuang)
 Oru Caleb - [Github](https://github.com/Projectbaby007) / [Twitter](https://twitter.com/ceoru_007)
+Solomon Ampah - [Github](https://github.com/Pizzosta) / [Twitter](https://twitter.com/vandal_pizzosta)
 Second part of Airbnb: Joann Vuong
-Third part of Airbnb: Oru Caleb
+Third part of Airbnb: Oru Caleb & Solomon Ampah
 ## License
 Public Domain. No copy write protection. 
