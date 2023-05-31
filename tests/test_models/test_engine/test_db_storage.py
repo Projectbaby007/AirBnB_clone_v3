@@ -90,26 +90,29 @@ class TestFileStorage(unittest.TestCase):
 
     def test_get_db(self):
         """Tests method for obtaining an instance from db storage"""
-        dic = {"name": "Cundinamarca"}
-        instance = State(**dic)
-        storage.new(instance)
+        state = State(name="California")
+        storage.new(state)
         storage.save()
-        get_instance = storage.get(State, instance.id)
-        self.assertEqual(get_instance, instance)
+
+        retrieved_state = storage.get(State, state.id)
+
+        self.assertEqual(retrieved_state, state)
 
     def test_count(self):
         """Tests count method in db storage"""
-        initial_count = storage.count()
+        state = State()
+        city = City()
+        user = User()
+        place = Place()
 
-        dic = {"name": "Vecindad"}
-        state = State(**dic)
         storage.new(state)
-
-        dic = {"name": "Mexico", "state_id": state.id}
-        city = City(**dic)
         storage.new(city)
-
+        storage.new(user)
+        storage.new(place)
         storage.save()
 
-        final_count = storage.count()
-        self.assertEqual(final_count, initial_count + 2)
+        total_count = storage.count()
+        self.assertEqual(total_count, 4)
+
+        state_count = storage.count(State)
+        self.assertEqual(state_count, 1)
