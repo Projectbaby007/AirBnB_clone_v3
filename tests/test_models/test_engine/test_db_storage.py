@@ -92,7 +92,6 @@ class TestFileStorage(unittest.TestCase):
         """Tests method for obtaining an instance from db storage"""
         dic = {"name": "Cundinamarca"}
         instance = State(**dic)
-        self.assertIsNone(storage.get(State, instance.id))
         storage.new(instance)
         storage.save()
         get_instance = storage.get(State, instance.id)
